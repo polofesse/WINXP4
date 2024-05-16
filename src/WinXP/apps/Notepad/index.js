@@ -5,7 +5,9 @@ import { WindowDropDowns } from 'components';
 import dropDownData from './dropDownData';
 
 export default function Notepad({ onClose }) {
-  const [docText, setDocText] = useState('');
+  const [docText, setDocText] = useState(
+    'Les Mystérieuses Aventures de Claude Conseil \nUn film de Marie-Lola Terver et Paul Jousselin\nProduit par les films du Sursaut',
+  );
   const [wordWrap, setWordWrap] = useState(false);
 
   function onClickOptionItem(item) {
@@ -84,4 +86,5 @@ const StyledTextarea = styled.textarea`
   ${props => (props.wordWrap ? '' : 'white-space: nowrap; overflow-x: scroll;')}
   overflow-y: scroll;
   border: 1px solid #96abff;
-`;
+// Remove the unnecessary closing curly brace
+// };
